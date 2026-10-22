@@ -45,7 +45,7 @@
                 font-weight: 800 !important;
             }
 
-            /* --- BARRAS DECORATIVAS ROJAS CAMBIADAS AL VERDE CORPORATIVO --- */
+            /* --- BARRAS DECORATIVAS AL VERDE CORPORATIVO --- */
             header.major:after,
             header.major::after,
             header.special:after,
@@ -159,31 +159,24 @@
                 text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8) !important;
             }
 
-            /* --- CONTENEDOR DEL LOGO PRINCIPAL --- */
-            #banner .content .image {
+            /* --- NUEVO CONTENEDOR DEL LOGO (IGNORADO POR EL JS DE LA PLANTILLA) --- */
+            #banner .content .hero-logo {
                 flex: 0.75 !important;
-                background: transparent !important;
-                backdrop-filter: none !important;
-                -webkit-backdrop-filter: none !important;
-                padding: 0 !important;
-                border: none !important;
-                box-shadow: none !important;
                 display: flex !important;
                 align-items: center !important;
                 justify-content: center !important;
+                position: relative !important;
+                z-index: 2 !important;
             }
-            #banner .content .image img {
+            #banner .content .hero-logo svg {
                 max-width: 320px !important;
                 width: 100% !important;
                 height: auto !important;
                 display: block !important;
                 filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.08));
             }
-            .goto-next {
-                display: none !important;
-            }
 
-            /* ---------------- SECCIONES CORPORATIVAS CON FOTOS DE FONDO ---------------- */
+            /* ---------------- SECCIONES CORPORATIVAS ---------------- */
             .spotlight {
                 position: relative !important;
                 border-bottom: 1px solid var(--c-border) !important;
@@ -351,7 +344,6 @@
                 box-shadow: 0 12px 24px rgba(4, 47, 22, 0.35) !important;
             }
 
-            /* --- BOTÓN SECUNDARIO HERO CON IDÉNTICA ANIMACIÓN --- */
             .button.btn-hero-secondary {
                 background: rgba(255, 255, 255, 0.95) !important;
                 color: var(--c-green-dark) !important;
@@ -392,6 +384,7 @@
                 font-size: 0.85em !important;
             }
 
+            /* --- MEDIA QUERIES PARA CELULARES (ARREGLO DEL LOGO) --- */
             @media screen and (max-width: 980px) {
                 #banner .content {
                     flex-direction: column-reverse !important;
@@ -403,6 +396,16 @@
                 #banner .content header h2 {
                     font-size: 2.1em !important;
                 }
+                
+                /* Configuración estricta para que el logo fluya con la página y no sea gigante */
+                #banner .content .hero-logo {
+                    margin: 0 auto 2.5em auto !important;
+                    width: 100% !important;
+                }
+                #banner .content .hero-logo svg {
+                    max-width: 160px !important; /* Tamaño compacto y elegante para celular */
+                }
+
                 .spotlight-inner {
                     grid-template-columns: 1fr !important;
                     gap: 2rem !important;
@@ -440,7 +443,7 @@
                     </nav>
                 </header>
 
-            <!-- Banner con fondo de catedral y logo con círculo blanco translúcido -->
+            <!-- Banner con fondo de catedral y logo incrustado nativamente para evitar bugs de navegador móvil -->
                 <section id="banner">
                     <div class="content">
                         <header>
@@ -452,10 +455,23 @@
                                 <a href="#one" class="button btn-hero-secondary">Nuestra Infraestructura</a>
                             </div>
                         </header>
-                        <span class="image">
-                            <!-- SVG: Círculo blanco translúcido que deja ver sutilmente la arquitectura -->
-                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 440'><circle cx='210' cy='215' r='195' fill='rgb(255, 255, 255)' fill-opacity='0.45'/><g transform='translate(210 215) scale(0.86) translate(-210 -215)'><path d='M100 280 L100 140 A110 110 0 0 1 320 140 L320 280 Z' fill='none' stroke='rgb(4, 47, 22)' stroke-width='20' stroke-linejoin='round'/><path d='M182 280 L182 100 A28 28 0 0 1 238 100 L238 280 Z' fill='rgb(4, 47, 22)'/><path d='M182 205 H158 Q138 205 138 185 V145' fill='none' stroke='rgb(4, 47, 22)' stroke-width='20' stroke-linecap='round'/><path d='M238 205 H262 Q282 205 282 185 V155' fill='none' stroke='rgb(4, 47, 22)' stroke-width='20' stroke-linecap='round'/><text x='210' y='365' font-family='Inter, Arial, sans-serif' font-weight='900' font-size='64' fill='rgb(4, 47, 22)' text-anchor='middle' letter-spacing='5'>CACTO</text></g></svg>" alt="Logo Cacto Websites" />
-                        </span>
+                        
+                        <!-- Contenedor .hero-logo (renombrado para desactivar el parallax bug de la plantilla) -->
+                        <div class="hero-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 440">
+                                <!-- Círculo blanco translúcido al 45% (suave como querías) -->
+                                <circle cx="210" cy="215" r="195" fill="#FFFFFF" fill-opacity="0.45"/>
+                                <!-- Cactus escalado proporcionalmente -->
+                                <g transform="translate(210 215) scale(0.86) translate(-210 -215)">
+                                    <path d="M100 280 L100 140 A110 110 0 0 1 320 140 L320 280 Z" fill="none" stroke="#042F16" stroke-width="20" stroke-linejoin="round"/>
+                                    <path d="M182 280 L182 100 A28 28 0 0 1 238 100 L238 280 Z" fill="#042F16"/>
+                                    <path d="M182 205 H158 Q138 205 138 185 V145" fill="none" stroke="#042F16" stroke-width="20" stroke-linecap="round"/>
+                                    <path d="M238 205 H262 Q282 205 282 185 V155" fill="none" stroke="#042F16" stroke-width="20" stroke-linecap="round"/>
+                                    <text x="210" y="365" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="64" fill="#042F16" text-anchor="middle" letter-spacing="5">CACTO</text>
+                                </g>
+                            </svg>
+                        </div>
+
                     </div>
                 </section>
 
