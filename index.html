@@ -45,7 +45,7 @@
                 font-weight: 800 !important;
             }
 
-            /* --- BARRAS DECORATIVAS AL VERDE CORPORATIVO --- */
+            /* --- BARRAS DECORATIVAS ROJAS CAMBIADAS AL VERDE CORPORATIVO --- */
             header.major:after,
             header.major::after,
             header.special:after,
@@ -60,7 +60,7 @@
                 border-bottom-color: var(--c-green) !important;
             }
 
-            /* ---------------- NAVBAR ---------------- */
+            /* ---------------- NAVBAR Y BARRA MÓVIL ---------------- */
             #header {
                 background: rgba(250, 248, 242, 0.96) !important;
                 backdrop-filter: blur(12px) !important;
@@ -68,7 +68,8 @@
                 border-bottom: 1px solid var(--c-border) !important;
                 box-shadow: 0 4px 20px rgba(4, 47, 22, 0.05) !important;
             }
-            #header h1 a {
+            /* Regla agrupada para alinear el logo tanto en PC (#header) como en celulares (#titleBar) */
+            #header h1 a, #titleBar .title a {
                 color: var(--c-green) !important;
                 font-weight: 900 !important;
                 font-size: 1.2em !important;
@@ -76,12 +77,18 @@
                 display: flex !important;
                 align-items: center !important;
                 gap: 10px !important;
+                text-decoration: none !important;
+                border: none !important;
             }
-            #header .nav-logo-icon {
-                width: 26px;
-                height: 26px;
-                flex-shrink: 0;
+            /* Blindaje estricto de tamaño para el icono superior en todos los dispositivos */
+            .nav-logo-icon {
+                width: 26px !important;
+                height: 26px !important;
+                min-width: 26px !important;
+                max-width: 26px !important;
+                flex-shrink: 0 !important;
                 transition: transform 0.25s ease;
+                display: block !important;
             }
             #header h1 a:hover .nav-logo-icon {
                 transform: scale(1.08);
@@ -159,7 +166,7 @@
                 text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8) !important;
             }
 
-            /* --- NUEVO CONTENEDOR DEL LOGO (IGNORADO POR EL JS DE LA PLANTILLA) --- */
+            /* --- CONTENEDOR DEL LOGO PRINCIPAL --- */
             #banner .content .hero-logo {
                 flex: 0.75 !important;
                 display: flex !important;
@@ -176,7 +183,7 @@
                 filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.08));
             }
 
-            /* ---------------- SECCIONES CORPORATIVAS ---------------- */
+            /* ---------------- SECCIONES CORPORATIVAS CON FOTOS DE FONDO ---------------- */
             .spotlight {
                 position: relative !important;
                 border-bottom: 1px solid var(--c-border) !important;
@@ -384,7 +391,7 @@
                 font-size: 0.85em !important;
             }
 
-            /* --- MEDIA QUERIES PARA CELULARES (ARREGLO DEL LOGO) --- */
+            /* --- MEDIA QUERIES PARA CELULARES --- */
             @media screen and (max-width: 980px) {
                 #banner .content {
                     flex-direction: column-reverse !important;
@@ -396,14 +403,12 @@
                 #banner .content header h2 {
                     font-size: 2.1em !important;
                 }
-                
-                /* Configuración estricta para que el logo fluya con la página y no sea gigante */
                 #banner .content .hero-logo {
                     margin: 0 auto 2.5em auto !important;
                     width: 100% !important;
                 }
                 #banner .content .hero-logo svg {
-                    max-width: 160px !important; /* Tamaño compacto y elegante para celular */
+                    max-width: 160px !important;
                 }
 
                 .spotlight-inner {
@@ -419,11 +424,11 @@
     <body class="is-preload landing">
         <div id="page-wrapper">
 
-            <!-- Header con Logo en miniatura junto al nombre -->
+            <!-- Header con Logo en miniatura junto al nombre (Con tamaño estricto 26x26 para bloquear bugs móviles) -->
                 <header id="header">
                     <h1 id="logo">
                         <a href="index.html">
-                            <svg class="nav-logo-icon" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <svg class="nav-logo-icon" width="26" height="26" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M20 200 L20 100 A90 90 0 0 1 200 100 L200 200 Z" stroke="#042F16" stroke-width="20" stroke-linejoin="round"/>
                                 <path d="M92 200 L92 70 A18 18 0 0 1 128 70 L128 200 Z" fill="#042F16"/>
                                 <path d="M92 145 H70 Q52 145 52 127 V95" stroke="#042F16" stroke-width="18" stroke-linecap="round"/>
@@ -443,7 +448,7 @@
                     </nav>
                 </header>
 
-            <!-- Banner con fondo de catedral y logo incrustado nativamente para evitar bugs de navegador móvil -->
+            <!-- Banner con fondo de catedral y logo principal con transparencia suave -->
                 <section id="banner">
                     <div class="content">
                         <header>
@@ -456,12 +461,9 @@
                             </div>
                         </header>
                         
-                        <!-- Contenedor .hero-logo (renombrado para desactivar el parallax bug de la plantilla) -->
                         <div class="hero-logo">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 440">
-                                <!-- Círculo blanco translúcido al 45% (suave como querías) -->
                                 <circle cx="210" cy="215" r="195" fill="#FFFFFF" fill-opacity="0.45"/>
-                                <!-- Cactus escalado proporcionalmente -->
                                 <g transform="translate(210 215) scale(0.86) translate(-210 -215)">
                                     <path d="M100 280 L100 140 A110 110 0 0 1 320 140 L320 280 Z" fill="none" stroke="#042F16" stroke-width="20" stroke-linejoin="round"/>
                                     <path d="M182 280 L182 100 A28 28 0 0 1 238 100 L238 280 Z" fill="#042F16"/>
