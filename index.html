@@ -60,7 +60,16 @@
                 letter-spacing: 0.5px !important;
                 display: flex !important;
                 align-items: center !important;
-                gap: 8px !important;
+                gap: 10px !important;
+            }
+            #header .nav-logo-icon {
+                width: 26px;
+                height: 26px;
+                flex-shrink: 0;
+                transition: transform 0.25s ease;
+            }
+            #header h1 a:hover .nav-logo-icon {
+                transform: scale(1.08);
             }
             #header nav > ul > li > a {
                 color: var(--c-text) !important;
@@ -135,7 +144,7 @@
                 text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8) !important;
             }
 
-            /* --- CONTENEDOR DEL LOGO TOTALMENTE TRANSPARENTE --- */
+            /* --- CONTENEDOR DEL LOGO PRINCIPAL --- */
             #banner .content .image {
                 flex: 0.75 !important;
                 background: transparent !important;
@@ -149,11 +158,11 @@
                 justify-content: center !important;
             }
             #banner .content .image img {
-                max-width: 290px !important;
+                max-width: 320px !important;
                 width: 100% !important;
                 height: auto !important;
                 display: block !important;
-                filter: drop-shadow(0 12px 28px rgba(4, 47, 22, 0.16));
+                filter: drop-shadow(0 14px 30px rgba(4, 47, 22, 0.15));
             }
             .goto-next {
                 display: none !important;
@@ -392,9 +401,19 @@
     <body class="is-preload landing">
         <div id="page-wrapper">
 
-            <!-- Header -->
+            <!-- Header con Logo en miniatura junto al nombre -->
                 <header id="header">
-                    <h1 id="logo"><a href="index.html">CACTO WEBSITES</a></h1>
+                    <h1 id="logo">
+                        <a href="index.html">
+                            <svg class="nav-logo-icon" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M20 200 L20 100 A90 90 0 0 1 200 100 L200 200 Z" stroke="#042F16" stroke-width="20" stroke-linejoin="round"/>
+                                <path d="M92 200 L92 70 A18 18 0 0 1 128 70 L128 200 Z" fill="#042F16"/>
+                                <path d="M92 145 H70 Q52 145 52 127 V95" stroke="#042F16" stroke-width="18" stroke-linecap="round"/>
+                                <path d="M128 145 H150 Q168 145 168 127 V105" stroke="#042F16" stroke-width="18" stroke-linecap="round"/>
+                            </svg>
+                            <span>CACTO WEBSITES</span>
+                        </a>
+                    </h1>
                     <nav id="nav">
                         <ul>
                             <li><a href="index.html">Inicio</a></li>
@@ -406,7 +425,7 @@
                     </nav>
                 </header>
 
-            <!-- Banner con fondo de catedral y logo vectorial SVG refinado -->
+            <!-- Banner con fondo de catedral y logo con círculo crema suave semi-translúcido -->
                 <section id="banner">
                     <div class="content">
                         <header>
@@ -419,8 +438,8 @@
                             </div>
                         </header>
                         <span class="image">
-                            <!-- SVG del logo con base recta, tronco elevado y fondo transparente -->
-                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 440'><path d='M90 280 L90 135 A110 110 0 0 1 310 135 L310 280 Z' fill='none' stroke='%23042F16' stroke-width='20' stroke-linejoin='round'/><path d='M172 280 L172 100 A28 28 0 0 1 228 100 L228 280 Z' fill='%23042F16'/><path d='M172 205 H152 Q134 205 134 187 V145' fill='none' stroke='%23042F16' stroke-width='20' stroke-linecap='round'/><path d='M228 205 H248 Q266 205 266 187 V155' fill='none' stroke='%23042F16' stroke-width='20' stroke-linecap='round'/><text x='200' y='365' font-family='Inter, Arial, sans-serif' font-weight='900' font-size='66' fill='%23042F16' text-anchor='middle' letter-spacing='5'>CACTO</text></svg>" alt="Logo Cacto Websites" />
+                            <!-- SVG del logo con círculo crema (#FAF8F2) translúcido y estructura estilizada -->
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 440'><circle cx='210' cy='215' r='195' fill='%23FAF8F2' fill-opacity='0.88'/><path d='M100 280 L100 140 A110 110 0 0 1 320 140 L320 280 Z' fill='none' stroke='%23042F16' stroke-width='20' stroke-linejoin='round'/><path d='M182 280 L182 100 A28 28 0 0 1 238 100 L238 280 Z' fill='%23042F16'/><path d='M182 205 H158 Q138 205 138 185 V145' fill='none' stroke='%23042F16' stroke-width='20' stroke-linecap='round'/><path d='M238 205 H262 Q282 205 282 185 V155' fill='none' stroke='%23042F16' stroke-width='20' stroke-linecap='round'/><text x='210' y='365' font-family='Inter, Arial, sans-serif' font-weight='900' font-size='64' fill='%23042F16' text-anchor='middle' letter-spacing='5'>CACTO</text></svg>" alt="Logo Cacto Websites" />
                         </span>
                     </div>
                 </section>
