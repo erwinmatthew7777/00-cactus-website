@@ -1,571 +1,585 @@
 <!DOCTYPE HTML>
 <!--
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Landed by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Cacto Websites | Ingeniería Web Alemana para Empresas en Santa Cruz</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		
-		<!-- Fuente moderna Inter -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <head>
+        <title>Cacto Websites | Ingeniería Web Alemana para Empresas en Santa Cruz</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        
+        <!-- Fuente moderna Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-		<style>
-			:root {
-				--c-green: #042F16;       
-				--c-green-dark: #021D0D;  
-				--c-green-light: #094A25; 
-				--c-cream: #FAF8F2;
-				--c-cream-soft: #F0EDE4;
-				--c-cream-card: #FFFFFF;
-				--c-text: #112218;
-				--c-muted: #1B2E24;
-				--c-border: rgba(4, 47, 22, 0.18);
-			}
+        <style>
+            :root {
+                --c-green: #042F16;       
+                --c-green-dark: #021D0D;  
+                --c-green-light: #094A25; 
+                --c-cream: #FAF8F2;
+                --c-cream-soft: #F0EDE4;
+                --c-cream-card: #FFFFFF;
+                --c-text: #112218;
+                --c-muted: #1B2E24;
+                --c-border: rgba(4, 47, 22, 0.18);
+            }
 
-			* {
-				font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-			}
+            * {
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+            }
 
-			body, #page-wrapper {
-				background-color: var(--c-cream) !important;
-				color: var(--c-text) !important;
-			}
+            body, #page-wrapper {
+                background-color: var(--c-cream) !important;
+                color: var(--c-text) !important;
+            }
 
-			/* --- SOLUCIÓN AL NOMBRE DE EMPRESA INVISIBLE --- */
-			strong, b {
-				color: var(--c-green-dark) !important;
-				font-weight: 800 !important;
-			}
+            /* --- SOLUCIÓN AL NOMBRE DE EMPRESA INVISIBLE --- */
+            strong, b {
+                color: var(--c-green-dark) !important;
+                font-weight: 800 !important;
+            }
 
-			/* ---------------- NAVBAR ---------------- */
-			#header {
-				background: rgba(250, 248, 242, 0.96) !important;
-				backdrop-filter: blur(12px) !important;
-				-webkit-backdrop-filter: blur(12px) !important;
-				border-bottom: 1px solid var(--c-border) !important;
-				box-shadow: 0 4px 20px rgba(4, 47, 22, 0.05) !important;
-			}
-			#header h1 a {
-				color: var(--c-green) !important;
-				font-weight: 900 !important;
-				font-size: 1.2em !important;
-				letter-spacing: 0.5px !important;
-				display: flex !important;
-				align-items: center !important;
-				gap: 8px !important;
-			}
-			#header nav > ul > li > a {
-				color: var(--c-text) !important;
-				font-weight: 600 !important;
-				font-size: 0.9em !important;
-			}
-			#header nav > ul > li .button.primary {
-				background: var(--c-green) !important;
-				color: #FFFFFF !important;
-				border-radius: 50px !important;
-				padding: 0 1.6em !important;
-				height: 2.8em !important;
-				line-height: 2.8em !important;
-				box-shadow: 0 4px 14px rgba(4, 47, 22, 0.28) !important;
-			}
+            /* ---------------- NAVBAR ---------------- */
+            #header {
+                background: rgba(250, 248, 242, 0.96) !important;
+                backdrop-filter: blur(12px) !important;
+                -webkit-backdrop-filter: blur(12px) !important;
+                border-bottom: 1px solid var(--c-border) !important;
+                box-shadow: 0 4px 20px rgba(4, 47, 22, 0.05) !important;
+            }
+            #header h1 a {
+                color: var(--c-green) !important;
+                font-weight: 900 !important;
+                font-size: 1.2em !important;
+                letter-spacing: 0.5px !important;
+                display: flex !important;
+                align-items: center !important;
+                gap: 8px !important;
+            }
+            #header nav > ul > li > a {
+                color: var(--c-text) !important;
+                font-weight: 600 !important;
+                font-size: 0.9em !important;
+            }
+            #header nav > ul > li .button.primary {
+                background: var(--c-green) !important;
+                color: #FFFFFF !important;
+                border-radius: 50px !important;
+                padding: 0 1.6em !important;
+                height: 2.8em !important;
+                line-height: 2.8em !important;
+                box-shadow: 0 4px 14px rgba(4, 47, 22, 0.28) !important;
+            }
 
-			/* ---------------- HERO / BANNER CON CATEDRAL MÁS BLANCA Y LETRAS BRILLOSAS ---------------- */
-			#banner {
-				position: relative !important;
-				/* Velo más blanco y opaco (0.80) para que la catedral sea un fondo sutil y limpio */
-				background-image: linear-gradient(rgba(250, 248, 242, 0.80), rgba(250, 248, 242, 0.85)), url('catedral.jpg') !important;
-				background-size: cover !important;
-				background-position: center center !important;
-				background-repeat: no-repeat !important;
-				padding: 9em 2em 6em 2em !important;
-				border-bottom: 1px solid var(--c-border) !important;
-			}
-			#banner:before, #banner:after {
-				display: none !important;
-			}
-			#banner .content {
-				max-width: 1200px !important;
-				margin: 0 auto !important;
-				display: flex !important;
-				align-items: center !important;
-				justify-content: space-between !important;
-				gap: 3.5rem !important;
-				position: relative !important;
-				z-index: 2 !important;
-			}
-			#banner .content header {
-				text-align: left !important;
-				flex: 1.25 !important;
-			}
-			.badge-tech {
-				display: inline-block;
-				white-space: nowrap;
-				background: rgba(255, 255, 255, 0.9);
-				color: var(--c-green-dark);
-				font-weight: 800;
-				font-size: 0.85em;
-				padding: 0.5em 1.2em;
-				border-radius: 50px;
-				margin-bottom: 1.2em;
-				border: 1px solid var(--c-green);
-				letter-spacing: 0.3px;
-				box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-			}
-			/* --- BRILLO EXCLUSIVO PARA LAS LETRAS SOBRE LA CATEDRAL --- */
-			#banner .content header h2 {
-				color: var(--c-green-dark) !important;
-				font-weight: 900 !important;
-				font-size: 2.75em !important;
-				line-height: 1.15 !important;
-				letter-spacing: -0.02em !important;
-				margin-bottom: 0.5em !important;
-				text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8) !important;
-			}
-			#banner .content header p {
-				color: var(--c-green-dark) !important;
-				font-size: 1.15em !important;
-				line-height: 1.65 !important;
-				font-weight: 800 !important;
-				text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8) !important;
-			}
-			#banner .content .image {
-				flex: 0.75 !important;
-				background: rgba(255, 255, 255, 0.95) !important;
-				backdrop-filter: blur(8px) !important;
-				padding: 2.2rem !important;
-				border-radius: 28px !important;
-				border: 1.5px solid var(--c-border) !important;
-				box-shadow: 0 25px 60px -15px rgba(4, 47, 22, 0.25) !important;
-				display: flex !important;
-				align-items: center !important;
-				justify-content: center !important;
-			}
-			#banner .content .image img {
-				max-width: 250px !important;
-				width: 100% !important;
-				height: auto !important;
-				display: block !important;
-			}
-			.goto-next {
-				display: none !important;
-			}
+            /* ---------------- HERO / BANNER CON CATEDRAL MÁS BLANCA Y LETRAS BRILLOSAS ---------------- */
+            #banner {
+                position: relative !important;
+                background-image: linear-gradient(rgba(250, 248, 242, 0.80), rgba(250, 248, 242, 0.85)), url('catedral.jpg') !important;
+                background-size: cover !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+                padding: 9em 2em 6em 2em !important;
+                border-bottom: 1px solid var(--c-border) !important;
+            }
+            #banner:before, #banner:after {
+                display: none !important;
+            }
+            #banner .content {
+                max-width: 1200px !important;
+                margin: 0 auto !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                gap: 3.5rem !important;
+                position: relative !important;
+                z-index: 2 !important;
+            }
+            #banner .content header {
+                text-align: left !important;
+                flex: 1.25 !important;
+            }
+            .badge-tech {
+                display: inline-block;
+                white-space: nowrap;
+                background: rgba(255, 255, 255, 0.9);
+                color: var(--c-green-dark);
+                font-weight: 800;
+                font-size: 0.85em;
+                padding: 0.5em 1.2em;
+                border-radius: 50px;
+                margin-bottom: 1.2em;
+                border: 1px solid var(--c-green);
+                letter-spacing: 0.3px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            }
+            /* --- BRILLO EXCLUSIVO PARA LAS LETRAS SOBRE LA CATEDRAL --- */
+            #banner .content header h2 {
+                color: var(--c-green-dark) !important;
+                font-weight: 900 !important;
+                font-size: 2.75em !important;
+                line-height: 1.15 !important;
+                letter-spacing: -0.02em !important;
+                margin-bottom: 0.5em !important;
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8) !important;
+            }
+            #banner .content header p {
+                color: var(--c-green-dark) !important;
+                font-size: 1.15em !important;
+                line-height: 1.65 !important;
+                font-weight: 800 !important;
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8) !important;
+            }
+            #banner .content .image {
+                flex: 0.75 !important;
+                background: rgba(255, 255, 255, 0.95) !important;
+                backdrop-filter: blur(8px) !important;
+                padding: 2.2rem !important;
+                border-radius: 28px !important;
+                border: 1.5px solid var(--c-border) !important;
+                box-shadow: 0 25px 60px -15px rgba(4, 47, 22, 0.25) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            #banner .content .image img {
+                max-width: 250px !important;
+                width: 100% !important;
+                height: auto !important;
+                display: block !important;
+            }
+            .goto-next {
+                display: none !important;
+            }
 
-			/* ---------------- SECCIONES CORPORATIVAS CON TUS FOTOS DE FONDO MÁS TRANSPARENTES ---------------- */
-			.spotlight {
-				position: relative !important;
-				border-bottom: 1px solid var(--c-border) !important;
-				padding: 5.5em 2em !important;
-				background-size: cover !important;
-				background-position: center center !important;
-				background-repeat: no-repeat !important;
-			}
-			/* Estos fondos usan TUS fotos locales y tienen un velo MUY TRANSPARENTE (0.35) para que destaquen */
-			.spotlight#one {
-				background-image: linear-gradient(rgba(250, 248, 242, 0.35), rgba(250, 248, 242, 0.45)), url('fondo1.png') !important;
-			}
-			.spotlight#two {
-				background-image: linear-gradient(rgba(250, 248, 242, 0.35), rgba(250, 248, 242, 0.45)), url('fondo2.png') !important;
-			}
-			.spotlight#three {
-				background-image: linear-gradient(rgba(250, 248, 242, 0.35), rgba(250, 248, 242, 0.45)), url('fondo3.jpg') !important;
-			}
+            /* ---------------- SECCIONES CORPORATIVAS CON FOTOS DE FONDO ---------------- */
+            .spotlight {
+                position: relative !important;
+                border-bottom: 1px solid var(--c-border) !important;
+                padding: 5.5em 2em !important;
+                background-size: cover !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+            }
+            .spotlight#one {
+                background-image: linear-gradient(rgba(250, 248, 242, 0.35), rgba(250, 248, 242, 0.45)), url('fondo1.png') !important;
+            }
+            .spotlight#two {
+                background-image: linear-gradient(rgba(250, 248, 242, 0.35), rgba(250, 248, 242, 0.45)), url('fondo2.png') !important;
+            }
+            .spotlight#three {
+                background-image: linear-gradient(rgba(250, 248, 242, 0.35), rgba(250, 248, 242, 0.45)), url('fondo3.jpg') !important;
+            }
 
-			.spotlight:before, .spotlight:after {
-				display: none !important;
-			}
-			.spotlight-inner {
-				max-width: 1200px !important;
-				margin: 0 auto !important;
-				display: grid !important;
-				grid-template-columns: 1fr 1fr !important;
-				gap: 3.5rem !important;
-				align-items: center !important;
-				position: relative !important;
-				z-index: 2 !important;
-			}
-			.spotlight-photo {
-				border-radius: 22px !important;
-				overflow: hidden !important;
-				border: 2px solid var(--c-border) !important;
-				box-shadow: 0 20px 45px rgba(4, 47, 22, 0.2) !important;
-				background: #FFFFFF !important;
-				line-height: 0 !important;
-			}
-			.spotlight-photo img {
-				width: 100% !important;
-				height: 390px !important;
-				object-fit: cover !important;
-				display: block !important;
-				transition: transform 0.4s ease !important;
-			}
-			.spotlight-photo:hover img {
-				transform: scale(1.03) !important;
-			}
-			.spotlight .content {
-				position: relative !important;
-				background: rgba(255, 255, 255, 0.98) !important;
-				backdrop-filter: blur(10px) !important;
-				border-radius: 22px !important;
-				border: 1.5px solid var(--c-border) !important;
-				box-shadow: 0 12px 32px rgba(4, 47, 22, 0.12) !important;
-				padding: 3em !important;
-				width: 100% !important;
-				max-width: none !important;
-				transform: none !important;
-			}
-			/* Textos de las secciones limpias SIN BRILLO */
-			.spotlight h2 {
-				color: var(--c-green-dark) !important;
-				font-weight: 800 !important;
-				font-size: 1.85em !important;
-				letter-spacing: -0.01em !important;
-				margin-bottom: 0.4em !important;
-				text-shadow: none !important;
-			}
-			.spotlight header p {
-				color: var(--c-green) !important;
-				font-weight: 600 !important;
-				font-size: 1.05em !important;
-				margin-bottom: 1.2em !important;
-				text-shadow: none !important;
-			}
-			.spotlight p {
-				color: var(--c-text) !important;
-				line-height: 1.7 !important;
-				font-size: 1em !important;
-				font-weight: 500 !important;
-				text-shadow: none !important;
-			}
+            .spotlight:before, .spotlight:after {
+                display: none !important;
+            }
+            .spotlight-inner {
+                max-width: 1200px !important;
+                margin: 0 auto !important;
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 3.5rem !important;
+                align-items: center !important;
+                position: relative !important;
+                z-index: 2 !important;
+            }
+            .spotlight-photo {
+                border-radius: 22px !important;
+                overflow: hidden !important;
+                border: 2px solid var(--c-border) !important;
+                box-shadow: 0 20px 45px rgba(4, 47, 22, 0.2) !important;
+                background: #FFFFFF !important;
+                line-height: 0 !important;
+            }
+            .spotlight-photo img {
+                width: 100% !important;
+                height: 390px !important;
+                object-fit: cover !important;
+                display: block !important;
+                transition: transform 0.4s ease !important;
+            }
+            .spotlight-photo:hover img {
+                transform: scale(1.03) !important;
+            }
+            .spotlight .content {
+                position: relative !important;
+                background: rgba(255, 255, 255, 0.98) !important;
+                backdrop-filter: blur(10px) !important;
+                border-radius: 22px !important;
+                border: 1.5px solid var(--c-border) !important;
+                box-shadow: 0 12px 32px rgba(4, 47, 22, 0.12) !important;
+                padding: 3em !important;
+                width: 100% !important;
+                max-width: none !important;
+                transform: none !important;
+            }
+            .spotlight h2 {
+                color: var(--c-green-dark) !important;
+                font-weight: 800 !important;
+                font-size: 1.85em !important;
+                letter-spacing: -0.01em !important;
+                margin-bottom: 0.4em !important;
+                text-shadow: none !important;
+            }
+            .spotlight header p {
+                color: var(--c-green) !important;
+                font-weight: 600 !important;
+                font-size: 1.05em !important;
+                margin-bottom: 1.2em !important;
+                text-shadow: none !important;
+            }
+            .spotlight p {
+                color: var(--c-text) !important;
+                line-height: 1.7 !important;
+                font-size: 1em !important;
+                font-weight: 500 !important;
+                text-shadow: none !important;
+            }
 
-			/* ---------------- GRID DE CARACTERÍSTICAS ---------------- */
-			.wrapper.style1 {
-				background: #ECE7DA !important;
-				padding: 6em 2em !important;
-			}
-			.wrapper.style1 header.major h2 {
-				color: var(--c-green-dark) !important;
-				font-weight: 900 !important;
-				font-size: 2.2em !important;
-				text-shadow: none !important;
-			}
-			.wrapper.style1 header.major p {
-				color: var(--c-muted) !important;
-				font-size: 1.1em !important;
-				text-shadow: none !important;
-			}
-			.box.alt section {
-				background: var(--c-cream-card) !important;
-				padding: 2.5em 2em !important;
-				border-radius: 18px !important;
-				border: 1.5px solid var(--c-border) !important;
-				box-shadow: 0 8px 24px rgba(4, 47, 22, 0.06) !important;
-				height: 100% !important;
-				transition: transform 0.25s ease, box-shadow 0.25s ease !important;
-			}
-			.box.alt section:hover {
-				transform: translateY(-5px) !important;
-				box-shadow: 0 16px 36px rgba(4, 47, 22, 0.14) !important;
-			}
-			.icon.alt.major {
-				background: var(--c-green) !important;
-				color: #FFFFFF !important;
-				width: 3em !important;
-				height: 3em !important;
-				line-height: 3em !important;
-				border-radius: 12px !important;
-				margin-bottom: 1.2em !important;
-			}
-			.icon.alt.major:before {
-				color: #FFFFFF !important;
-				font-size: 1.3em !important;
-			}
-			.box.alt section h3 {
-				color: var(--c-green-dark) !important;
-				font-weight: 700 !important;
-				font-size: 1.2em !important;
-			}
-			.box.alt section p {
-				color: var(--c-text) !important;
-				font-size: 0.95em !important;
-				line-height: 1.6 !important;
-				font-weight: 500 !important;
-			}
+            /* ---------------- GRID DE CARACTERÍSTICAS ---------------- */
+            .wrapper.style1 {
+                background: #ECE7DA !important;
+                padding: 6em 2em !important;
+            }
+            .wrapper.style1 header.major h2 {
+                color: var(--c-green-dark) !important;
+                font-weight: 900 !important;
+                font-size: 2.2em !important;
+                text-shadow: none !important;
+            }
+            .wrapper.style1 header.major p {
+                color: var(--c-muted) !important;
+                font-size: 1.1em !important;
+                text-shadow: none !important;
+            }
+            .box.alt section {
+                background: var(--c-cream-card) !important;
+                padding: 2.5em 2em !important;
+                border-radius: 18px !important;
+                border: 1.5px solid var(--c-border) !important;
+                box-shadow: 0 8px 24px rgba(4, 47, 22, 0.06) !important;
+                height: 100% !important;
+                transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+            }
+            .box.alt section:hover {
+                transform: translateY(-5px) !important;
+                box-shadow: 0 16px 36px rgba(4, 47, 22, 0.14) !important;
+            }
+            .icon.alt.major {
+                background: var(--c-green) !important;
+                color: #FFFFFF !important;
+                width: 3em !important;
+                height: 3em !important;
+                line-height: 3em !important;
+                border-radius: 12px !important;
+                margin-bottom: 1.2em !important;
+            }
+            .icon.alt.major:before {
+                color: #FFFFFF !important;
+                font-size: 1.3em !important;
+            }
+            .box.alt section h3 {
+                color: var(--c-green-dark) !important;
+                font-weight: 700 !important;
+                font-size: 1.2em !important;
+            }
+            .box.alt section p {
+                color: var(--c-text) !important;
+                font-size: 0.95em !important;
+                line-height: 1.6 !important;
+                font-weight: 500 !important;
+            }
 
-			/* ---------------- BOTONES Y CTA ---------------- */
-			.button {
-				border-radius: 50px !important;
-				font-weight: 700 !important;
-				padding: 0 2em !important;
-				height: 3.2em !important;
-				line-height: 3.2em !important;
-				border: 1.5px solid var(--c-green) !important;
-				color: var(--c-green) !important;
-				background: transparent !important;
-				transition: all 0.2s ease !important;
-			}
-			.button:hover {
-				background: var(--c-green) !important;
-				color: #FFFFFF !important;
-			}
-			.button.primary {
-				background: var(--c-green) !important;
-				color: #FFFFFF !important;
-				border: none !important;
-				box-shadow: 0 8px 20px rgba(4, 47, 22, 0.25) !important;
-			}
-			.button.primary:hover {
-				background: var(--c-green-light) !important;
-				transform: translateY(-2px) !important;
-			}
+            /* ---------------- BOTONES Y CTA ---------------- */
+            .button {
+                border-radius: 50px !important;
+                font-weight: 700 !important;
+                padding: 0 2em !important;
+                height: 3.2em !important;
+                line-height: 3.2em !important;
+                border: 1.5px solid var(--c-green) !important;
+                color: var(--c-green) !important;
+                background: transparent !important;
+                transition: all 0.2s ease !important;
+            }
+            .button:hover {
+                background: var(--c-green) !important;
+                color: #FFFFFF !important;
+                transform: translateY(-2px) !important;
+            }
+            .button.primary {
+                background: var(--c-green) !important;
+                color: #FFFFFF !important;
+                border: none !important;
+                box-shadow: 0 8px 20px rgba(4, 47, 22, 0.25) !important;
+            }
+            .button.primary:hover {
+                background: var(--c-green-light) !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 12px 24px rgba(4, 47, 22, 0.35) !important;
+            }
 
-			/* ---------------- SECCIÓN FINAL Y FOOTER ---------------- */
-			.wrapper.style2 {
-				background: var(--c-green-dark) !important;
-				padding: 6em 2em !important;
-			}
-			.wrapper.style2 h2 {
-				color: #FFFFFF !important;
-				font-weight: 900 !important;
-				font-size: 2.2em !important;
-			}
-			.wrapper.style2 p {
-				color: #D3E0D8 !important;
-				font-size: 1.1em !important;
-			}
-			#footer {
-				background: #011107 !important;
-				padding: 4em 0 !important;
-			}
-			#footer .icons .icon.alt:before {
-				color: #A0BDB0 !important;
-			}
-			#footer .copyright li {
-				color: #7D9C8D !important;
-				font-size: 0.85em !important;
-			}
+            /* --- BOTÓN SECUNDARIO HERO CON IDÉNTICA ANIMACIÓN DE ELEVACIÓN --- */
+            .button.btn-hero-secondary {
+                background: rgba(255, 255, 255, 0.95) !important;
+                color: var(--c-green-dark) !important;
+                border: 1.5px solid var(--c-green) !important;
+                box-shadow: 0 8px 20px rgba(4, 47, 22, 0.12) !important;
+                transition: all 0.2s ease !important;
+            }
+            .button.btn-hero-secondary:hover {
+                background: #FFFFFF !important;
+                color: var(--c-green-light) !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 12px 24px rgba(4, 47, 22, 0.22) !important;
+            }
 
-			@media screen and (max-width: 980px) {
-				#banner .content {
-					flex-direction: column-reverse !important;
-					text-align: center !important;
-				}
-				#banner .content header {
-					text-align: center !important;
-				}
-				#banner .content header h2 {
-					font-size: 2.1em !important;
-				}
-				.spotlight-inner {
-					grid-template-columns: 1fr !important;
-					gap: 2rem !important;
-				}
-				.spotlight-photo img {
-					height: 260px !important;
-				}
-			}
-		</style>
-	</head>
-	<body class="is-preload landing">
-		<div id="page-wrapper">
+            /* ---------------- SECCIÓN FINAL Y FOOTER ---------------- */
+            .wrapper.style2 {
+                background: var(--c-green-dark) !important;
+                padding: 6em 2em !important;
+            }
+            .wrapper.style2 h2 {
+                color: #FFFFFF !important;
+                font-weight: 900 !important;
+                font-size: 2.2em !important;
+            }
+            .wrapper.style2 p {
+                color: #D3E0D8 !important;
+                font-size: 1.1em !important;
+            }
+            #footer {
+                background: #011107 !important;
+                padding: 4em 0 !important;
+            }
+            #footer .icons .icon.alt:before {
+                color: #A0BDB0 !important;
+            }
+            #footer .copyright li {
+                color: #7D9C8D !important;
+                font-size: 0.85em !important;
+            }
 
-			<!-- Header -->
-				<header id="header">
-					<h1 id="logo"><a href="index.html">CACTO WEBSITES</a></h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Inicio</a></li>
-							<li><a href="#one">Ingeniería</a></li>
-							<li><a href="#two">Tecnología</a></li>
-							<li><a href="#four">Ventajas</a></li>
-							<li><a href="#" class="button primary wa-link">Cotizar por WhatsApp</a></li>
-						</ul>
-					</nav>
-				</header>
+            @media screen and (max-width: 980px) {
+                #banner .content {
+                    flex-direction: column-reverse !important;
+                    text-align: center !important;
+                }
+                #banner .content header {
+                    text-align: center !important;
+                }
+                #banner .content header h2 {
+                    font-size: 2.1em !important;
+                }
+                .spotlight-inner {
+                    grid-template-columns: 1fr !important;
+                    gap: 2rem !important;
+                }
+                .spotlight-photo img {
+                    height: 260px !important;
+                }
+            }
+        </style>
+    </head>
+    <body class="is-preload landing">
+        <div id="page-wrapper">
 
-			<!-- Banner con foto catedral.jpg de fondo, muy blanca y con letras brillantes -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<span class="badge-tech">Desarrollado desde Alemania, con corazón cruceño</span>
-							<h2>Precisión tecnológica alemana para impulsar las empresas de nuestra bella Santa Cruz</h2>
-							<p>Somos un equipo de ingenieros con formación en la TU Darmstadt, dedicados a modernizar el comercio cruceño con sistemas de alta precisión. Desarrollamos plataformas web corporativas que transforman visitas en clientes reales directo a tu WhatsApp.</p>
-							<div style="margin-top: 2rem;">
-								<a href="#" class="button primary wa-link" style="margin-right: 0.8rem;">Solicitar Prototipo Gratis</a>
-								<a href="#one" class="button" style="background: rgba(255,255,255,0.9) !important;">Nuestra Infraestructura</a>
-							</div>
-						</header>
-						<span class="image">
-							<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 560'><rect width='500' height='560' fill='%23F5F2E8' rx='30'/><path d='M120 335 V205 A130 130 0 0 1 380 205 V335 Z' fill='none' stroke='%23042F16' stroke-width='24' stroke-linejoin='round'/><rect x='215' y='135' width='70' height='200' rx='35' fill='%23042F16'/><path d='M220 250 Q180 250 180 210 V175' fill='none' stroke='%23042F16' stroke-width='28' stroke-linecap='round'/><path d='M280 270 Q320 270 320 230 V190' fill='none' stroke='%23042F16' stroke-width='28' stroke-linecap='round'/><text x='250' y='448' font-family='Inter, Arial, sans-serif' font-weight='900' font-size='84' fill='%23042F16' text-anchor='middle' letter-spacing='2'>CACTO</text></svg>" alt="Logo Cacto Websites" />
-						</span>
-					</div>
-				</section>
+            <!-- Header -->
+                <header id="header">
+                    <h1 id="logo"><a href="index.html">CACTO WEBSITES</a></h1>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="#one">Ingeniería</a></li>
+                            <li><a href="#two">Tecnología</a></li>
+                            <li><a href="#four">Ventajas</a></li>
+                            <li><a href="#" class="button primary wa-link">Cotizar por WhatsApp</a></li>
+                        </ul>
+                    </nav>
+                </header>
 
-			<!-- One: Fondo 1 (tu foto local, muy transparente) con imagen frontal elegida por mí -->
-				<section id="one" class="spotlight">
-					<div class="spotlight-inner">
-						<div class="spotlight-photo">
-							<!-- Imagen frontal corporativa -->
-							<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85" alt="Arquitectura Corporativa y Negocios" />
-						</div>
-						<div class="content">
-							<header>
-								<h2>Arquitectura corporativa con rigor de ingeniería alemana</h2>
-								<p>Sistemas robustos desarrollados con mentalidad de precisión y automatización.</p>
-							</header>
-							<p>Con un background técnico en mecatrónica por la TU Darmstadt y desarrollo de software avanzado, aplicamos el rigor de la ingeniería europea al diseño web. Identificamos que grandes negocios en nuestra bella Santa Cruz tienen una reputación impecable pero requieren una infraestructura digital igual de sólida.</p>
-							<p style="margin-top: 1em;">En <strong>Cacto Websites</strong> creamos plataformas limpias, modulares y ultrarrápidas que proyectan máxima solidez corporativa.</p>
-						</div>
-					</div>
-				</section>
+            <!-- Banner con foto catedral.jpg de fondo, muy blanca y con letras brillantes -->
+                <section id="banner">
+                    <div class="content">
+                        <header>
+                            <span class="badge-tech">Desarrollado desde Alemania, con corazón cruceño</span>
+                            <h2>Precisión tecnológica alemana para impulsar las empresas de nuestra bella Santa Cruz</h2>
+                            <p>Somos un equipo de ingenieros con formación en la TU Darmstadt, dedicados a modernizar el comercio cruceño con sistemas de alta precisión. Desarrollamos plataformas web corporativas que transforman visitas en clientes reales directo a tu WhatsApp.</p>
+                            <div style="margin-top: 2rem;">
+                                <a href="#" class="button primary wa-link" style="margin-right: 0.8rem;">Solicitar Prototipo Gratis</a>
+                                <a href="#one" class="button btn-hero-secondary">Nuestra Infraestructura</a>
+                            </div>
+                        </header>
+                        <span class="image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 560'><rect width='500' height='560' fill='%23F5F2E8' rx='30'/><path d='M120 335 V205 A130 130 0 0 1 380 205 V335 Z' fill='none' stroke='%23042F16' stroke-width='24' stroke-linejoin='round'/><rect x='215' y='135' width='70' height='200' rx='35' fill='%23042F16'/><path d='M220 250 Q180 250 180 210 V175' fill='none' stroke='%23042F16' stroke-width='28' stroke-linecap='round'/><path d='M280 270 Q320 270 320 230 V190' fill='none' stroke='%23042F16' stroke-width='28' stroke-linecap='round'/><text x='250' y='448' font-family='Inter, Arial, sans-serif' font-weight='900' font-size='84' fill='%23042F16' text-anchor='middle' letter-spacing='2'>CACTO</text></svg>" alt="Logo Cacto Websites" />
+                        </span>
+                    </div>
+                </section>
 
-			<!-- Two: Fondo 2 (tu foto local, muy transparente) con imagen frontal de profesionales de espaldas -->
-				<section id="two" class="spotlight">
-					<div class="spotlight-inner">
-						<div class="content">
-							<header>
-								<h2>Sistemas optimizados para conversión inmediata por WhatsApp</h2>
-								<p>Ingeniería de software orientada a la eficiencia y el rendimiento.</p>
-							</header>
-							<p>Así como en la investigación avanzada de bioprinting y desarrollo de sistemas mecatrónicos cada parámetro cuenta, en el entorno comercial cruceño la velocidad y la simplicidad son claves. Desarrollamos embudos limpios que conectan al instante a tus prospectos de Google con tu WhatsApp corporativo.</p>
-							<ul class="actions" style="margin-top: 1.5em;">
-								<li><a href="#" class="button primary wa-link">Ver una Demostración</a></li>
-							</ul>
-						</div>
-						<div class="spotlight-photo">
-							<!-- Imagen corporativa de dos profesionales colaborando de espaldas -->
-							<img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1400&q=85" alt="Equipo colaborando en desarrollo y diseño corporativo" />
-						</div>
-					</div>
-				</section>
+            <!-- One: Fondo 1 (tu foto local, muy transparente) con imagen frontal elegida por mí -->
+                <section id="one" class="spotlight">
+                    <div class="spotlight-inner">
+                        <div class="spotlight-photo">
+                            <!-- Imagen frontal corporativa -->
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85" alt="Arquitectura Corporativa y Negocios" />
+                        </div>
+                        <div class="content">
+                            <header>
+                                <h2>Arquitectura corporativa con rigor de ingeniería alemana</h2>
+                                <p>Sistemas robustos desarrollados con mentalidad de precisión y automatización.</p>
+                            </header>
+                            <p>Con un background técnico en mecatrónica por la TU Darmstadt y desarrollo de software avanzado, aplicamos el rigor de la ingeniería europea al diseño web. Identificamos que grandes negocios en nuestra bella Santa Cruz tienen una reputación impecable pero requieren una infraestructura digital igual de sólida.</p>
+                            <p style="margin-top: 1em;">En <strong>Cacto Websites</strong> creamos plataformas limpias, modulares y ultrarrápidas que proyectan máxima solidez corporativa.</p>
+                        </div>
+                    </div>
+                </section>
 
-			<!-- Three: Fondo 3 (tu foto local, muy transparente) con imagen frontal elegida por mí -->
-				<section id="three" class="spotlight">
-					<div class="spotlight-inner">
-						<div class="spotlight-photo">
-							<!-- Imagen frontal de Servidores / Cloud -->
-							<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85" alt="Infraestructura de Servidores Cloud" />
-						</div>
-						<div class="content">
-							<header>
-								<h2>Infraestructura Cloud y mantenimiento sin complicaciones</h2>
-								<p>Nosotros nos encargamos de escribir y mantener el código.</p>
-							</header>
-							<p>Desplegamos los sitios en redes globales de servidores optimizados con protección SSL avanzada. Si quieres agendar un cambio o update, como poner nuevas fotos o anunciar un evento, nosotros nos encargamos con un simple mensaje de WhatsApp. Lo mantenemos simple, para que ustedes no tengan que hacer nada.</p>
-							<ul class="actions" style="margin-top: 1.5em;">
-								<li><a href="#" class="button wa-link">Agendar Diagnóstico</a></li>
-							</ul>
-						</div>
-					</div>
-				</section>
+            <!-- Two: Fondo 2 (tu foto local, muy transparente) con imagen frontal de profesionales de espaldas -->
+                <section id="two" class="spotlight">
+                    <div class="spotlight-inner">
+                        <div class="content">
+                            <header>
+                                <h2>Sistemas optimizados para conversión inmediata por WhatsApp</h2>
+                                <p>Ingeniería de software orientada a la eficiencia y el rendimiento.</p>
+                            </header>
+                            <p>Así como en la investigación avanzada de bioprinting y desarrollo de sistemas mecatrónicos cada parámetro cuenta, en el entorno comercial cruceño la velocidad y la simplicidad son claves. Desarrollamos embudos limpios que conectan al instante a tus prospectos de Google con tu WhatsApp corporativo.</p>
+                            <ul class="actions" style="margin-top: 1.5em;">
+                                <li><a href="#" class="button primary wa-link">Ver una Demostración</a></li>
+                            </ul>
+                        </div>
+                        <div class="spotlight-photo">
+                            <!-- Imagen corporativa de dos profesionales colaborando de espaldas -->
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1400&q=85" alt="Equipo colaborando en desarrollo y diseño corporativo" />
+                        </div>
+                    </div>
+                </section>
 
-			<!-- Four -->
-				<section id="four" class="wrapper style1 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>¿Por qué las empresas eligen Cacto Websites?</h2>
-							<p>Solidez tecnológica creada por ingenieros para potenciar el comercio cruceño.</p>
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-cogs"></span>
-									<h3>Ingeniería de Precisión</h3>
-									<p>Desarrollo estructurado, código limpio y tiempos de carga instantáneos respaldados por formación en la TU Darmstadt.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-comment"></span>
-									<h3>Integración WhatsApp</h3>
-									<p>Embudos directos para transformar búsquedas de Google en clientes listos para cotizar en tu celular.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-flask"></span>
-									<h3>Prototipo Previo</h3>
-									<p>Maquetas funcionales de alta fidelidad para que evalúes el diseño de tu empresa antes de cualquier compromiso.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-paper-plane"></span>
-									<h3>Despliegue Ágil</h3>
-									<p>Plataformas corporativas en línea, adaptadas a dispositivos móviles y listas en tu dominio propio.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-sync"></span>
-									<h3>Gestión Continua</h3>
-									<p>Actualizamos catálogos, fotografías o servicios mensuales con un simple mensaje de texto.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-shield-alt"></span>
-									<h3>Infraestructura Segura</h3>
-									<p>Servidores cloud activos 24/7 con cifrado SSL y rendimiento garantizado en cualquier conexión.</p>
-								</section>
-							</div>
-						</div>
-						<footer class="major">
-							<ul class="actions special">
-								<li><a href="#" class="button primary wa-link">Solicitar Propuesta por WhatsApp</a></li>
-							</ul>
-						</footer>
-					</div>
-				</section>
+            <!-- Three: Fondo 3 (tu foto local, muy transparente) con imagen frontal elegida por mí -->
+                <section id="three" class="spotlight">
+                    <div class="spotlight-inner">
+                        <div class="spotlight-photo">
+                            <!-- Imagen frontal de Servidores / Cloud -->
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85" alt="Infraestructura de Servidores Cloud" />
+                        </div>
+                        <div class="content">
+                            <header>
+                                <h2>Infraestructura Cloud y mantenimiento sin complicaciones</h2>
+                                <p>Nosotros nos encargamos de escribir y mantener el código.</p>
+                            </header>
+                            <p>Desplegamos los sitios en redes globales de servidores optimizados con protección SSL avanzada. Si quieres agendar un cambio o update, como poner nuevas fotos o anunciar un evento, nosotros nos encargamos con un simple mensaje de WhatsApp. Lo mantenemos simple, para que ustedes no tengan que hacer nada.</p>
+                            <ul class="actions" style="margin-top: 1.5em;">
+                                <li><a href="#" class="button wa-link">Agendar Diagnóstico</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
-			<!-- Five -->
-				<section id="five" class="wrapper style2 special fade">
-					<div class="container">
-						<header>
-							<h2>Lleva tu negocio al siguiente nivel con Cacto Websites</h2>
-							<p>Contáctanos hoy y recibe una demostración personalizada para tu empresa en Santa Cruz.</p>
-							<p style="font-size: 0.9em; opacity: 0.85;">Santa Cruz de la Sierra — Av. Rosita Pochi S/N, Av. Piraí entre 3er y 4to Anillo · Operaciones en Alemania y Bolivia</p>
-						</header>
-						<div style="text-align: center; margin-top: 2em;">
-							<a href="#" class="button primary wa-link" style="background: #FFFFFF !important; color: #021D0D !important; font-size: 1.1em; padding: 0 2.5em; height: 3.4em; line-height: 3.4em;">📲 Chatear por WhatsApp Ahora</a>
-						</div>
-					</div>
-				</section>
+            <!-- Four -->
+                <section id="four" class="wrapper style1 special fade-up">
+                    <div class="container">
+                        <header class="major">
+                            <h2>¿Por qué las empresas eligen Cacto Websites?</h2>
+                            <p>Solidez tecnológica creada por ingenieros para potenciar el comercio cruceño.</p>
+                        </header>
+                        <div class="box alt">
+                            <div class="row gtr-uniform">
+                                <section class="col-4 col-6-medium col-12-xsmall">
+                                    <span class="icon solid alt major fa-cogs"></span>
+                                    <h3>Ingeniería de Precisión</h3>
+                                    <p>Desarrollo estructurado, código limpio y tiempos de carga instantáneos respaldados por formación en la TU Darmstadt.</p>
+                                </section>
+                                <section class="col-4 col-6-medium col-12-xsmall">
+                                    <span class="icon solid alt major fa-comment"></span>
+                                    <h3>Integración WhatsApp</h3>
+                                    <p>Embudos directos para transformar búsquedas de Google en clientes listos para cotizar en tu celular.</p>
+                                </section>
+                                <section class="col-4 col-6-medium col-12-xsmall">
+                                    <span class="icon solid alt major fa-flask"></span>
+                                    <h3>Prototipo Previo</h3>
+                                    <p>Maquetas funcionales de alta fidelidad para que evalúes el diseño de tu empresa antes de cualquier compromiso.</p>
+                                </section>
+                                <section class="col-4 col-6-medium col-12-xsmall">
+                                    <span class="icon solid alt major fa-paper-plane"></span>
+                                    <h3>Despliegue Ágil</h3>
+                                    <p>Plataformas corporativas en línea, adaptadas a dispositivos móviles y listas en tu dominio propio.</p>
+                                </section>
+                                <section class="col-4 col-6-medium col-12-xsmall">
+                                    <span class="icon solid alt major fa-sync"></span>
+                                    <h3>Gestión Continua</h3>
+                                    <p>Actualizamos catálogos, fotografías o servicios mensuales con un simple mensaje de texto.</p>
+                                </section>
+                                <section class="col-4 col-6-medium col-12-xsmall">
+                                    <span class="icon solid alt major fa-shield-alt"></span>
+                                    <h3>Infraestructura Segura</h3>
+                                    <p>Servidores cloud activos 24/7 con cifrado SSL y rendimiento garantizado en cualquier conexión.</p>
+                                </section>
+                            </div>
+                        </div>
+                        <footer class="major">
+                            <ul class="actions special">
+                                <li><a href="#" class="button primary wa-link">Solicitar Propuesta por WhatsApp</a></li>
+                            </ul>
+                        </footer>
+                    </div>
+                </section>
 
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="#" class="icon brands alt fa-whatsapp wa-link"><span class="label">WhatsApp</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Cacto Websites (CACTO). Ingeniería Web Alemana para Santa Cruz, Bolivia.</li>
-						<li>Av. Rosita Pochi S/N, Av. Piraí entre 3er y 4to Anillo</li>
-					</ul>
-				</footer>
+            <!-- Five -->
+                <section id="five" class="wrapper style2 special fade">
+                    <div class="container">
+                        <header>
+                            <h2>Lleva tu negocio al siguiente nivel con Cacto Websites</h2>
+                            <p>Contáctanos hoy y recibe una demostración personalizada para tu empresa en Santa Cruz.</p>
+                            <p style="font-size: 0.9em; opacity: 0.85;">Santa Cruz de la Sierra — Av. Rosita Pochi S/N, Av. Piraí entre 3er y 4to Anillo · Operaciones en Alemania y Bolivia</p>
+                        </header>
+                        <div style="text-align: center; margin-top: 2em;">
+                            <a href="#" class="button primary wa-link" style="background: #FFFFFF !important; color: #021D0D !important; font-size: 1.1em; padding: 0 2.5em; height: 3.4em; line-height: 3.4em;">📲 Chatear por WhatsApp Ahora</a>
+                        </div>
+                    </div>
+                </section>
 
-		</div>
+            <!-- Footer -->
+                <footer id="footer">
+                    <ul class="icons">
+                        <li><a href="#" class="icon brands alt fa-whatsapp wa-link"><span class="label">WhatsApp</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>&copy; Cacto Websites (CACTO). Ingeniería Web Alemana para Santa Cruz, Bolivia.</li>
+                        <li>Av. Rosita Pochi S/N, Av. Piraí entre 3er y 4to Anillo</li>
+                    </ul>
+                </footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        </div>
 
-			<!-- CONFIGURACIÓN DE WHATSAPP -->
-			<script>
-				const TELEFONO_WHATSAPP = "4915773122306"; 
-				const MENSAJE_WHATSAPP = "Hola, vi la página de Cacto Websites y deseo solicitar una demostración para mi empresa.";
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/jquery.dropotron.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
 
-				document.querySelectorAll('.wa-link').forEach(boton => {
-					boton.href = `https://api.whatsapp.com/send?phone=${TELEFONO_WHATSAPP}&text=${encodeURIComponent(MENSAJE_WHATSAPP)}`;
-					boton.target = "_blank";
-					boton.rel = "noopener noreferrer";
-				});
-			</script>
+            <!-- CONFIGURACIÓN DE WHATSAPP -->
+            <script>
+                const TELEFONO_WHATSAPP = "4915773122306"; 
+                const MENSAJE_WHATSAPP = "Hola, vi la página de Cacto Websites y deseo solicitar una demostración para mi empresa.";
 
-	</body>
+                document.querySelectorAll('.wa-link').forEach(boton => {
+                    boton.href = `https://api.whatsapp.com/send?phone=${TELEFONO_WHATSAPP}&text=${encodeURIComponent(MENSAJE_WHATSAPP)}`;
+                    boton.target = "_blank";
+                    boton.rel = "noopener noreferrer";
+                });
+            </script>
+
+    </body>
 </html>
