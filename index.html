@@ -18,6 +18,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
         <style>
+            /* --- ANIMACIONES NATIVAS PARA MÓVILES --- */
+            html {
+                scroll-behavior: smooth !important; /* Deslizamiento suave al presionar botones */
+            }
+
             :root {
                 --c-green: #042F16;       
                 --c-green-dark: #021D0D;  
@@ -59,15 +64,17 @@
                 border-bottom-color: var(--c-green) !important;
             }
 
-            /* --- FIX: CAMBIAR EL BOTÓN ROSA DEL MENÚ MÓVIL AL VERDE CORPORATIVO --- */
-            #titleBar .toggle {
-                background-color: var(--c-green) !important;
+            /* --- FIX: BOTÓN DEL MENÚ MÓVIL AL VERDE OSCURO --- */
+            #titleBar {
+                background: var(--c-green-dark) !important; /* Fondo superior en móviles */
             }
-            #titleBar .toggle:before {
-                color: #FFFFFF !important;
+            #titleBar .toggle:before,
+            #titleBar .toggle::before {
+                background-color: var(--c-green) !important; /* Quita el cuadro rosado */
+                background: var(--c-green) !important;
             }
 
-            /* ---------------- NAVBAR Y BARRA MÓVIL ---------------- */
+            /* ---------------- NAVBAR ---------------- */
             #header {
                 background: rgba(250, 248, 242, 0.96) !important;
                 backdrop-filter: blur(12px) !important;
@@ -171,7 +178,6 @@
                 text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8) !important;
             }
 
-            /* --- CONTENEDOR DEL LOGO PRINCIPAL --- */
             #banner .content .hero-logo {
                 flex: 0.75 !important;
                 display: flex !important;
@@ -188,7 +194,6 @@
                 filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.08));
             }
 
-            /* Grupo de botones del Hero */
             .hero-buttons {
                 display: flex;
                 gap: 1rem;
@@ -348,12 +353,17 @@
                 background: transparent !important;
                 transition: all 0.2s ease !important;
                 text-align: center !important;
+                display: inline-block;
             }
             .button:hover {
                 background: var(--c-green) !important;
                 color: #FFFFFF !important;
                 transform: translateY(-2px) !important;
             }
+            .button:active {
+                transform: scale(0.96) translateY(0) !important; /* Efecto animado táctil en celulares */
+            }
+            
             .button.primary {
                 background: var(--c-green) !important;
                 color: #FFFFFF !important;
@@ -406,10 +416,9 @@
                 font-size: 0.85em !important;
             }
 
-            /* --- FIX: RESPONSIVE / DISPOSITIVOS MÓVILES --- */
+            /* --- FIX: CAJONES Y RESPONSIVE PARA CELULARES --- */
             @media screen and (max-width: 980px) {
                 #banner {
-                    /* Reducción drástica del espacio sobrante arriba y abajo */
                     padding: 5.5em 1.5em 3.5em 1.5em !important;
                 }
                 #banner .content {
@@ -418,21 +427,21 @@
                 #banner .content header {
                     display: flex;
                     flex-direction: column;
-                    align-items: center; /* Fuerza el centrado absoluto de todo el bloque */
+                    align-items: center;
                 }
                 #banner .content header h2,
                 #banner .content header p,
                 .badge-tech {
-                    text-align: center !important; /* Fuerza el centrado de los textos */
+                    text-align: center !important;
                 }
                 #banner .content .hero-logo {
-                    margin: 0 auto 1.5em auto !important; /* Menos margen debajo del logo */
+                    margin: 0 auto 1.5em auto !important;
                     width: 100% !important;
                 }
                 #banner .content .hero-logo svg {
                     max-width: 160px !important;
                 }
-                /* Apila los botones de inicio perfectamente en el centro */
+                
                 .hero-buttons {
                     flex-direction: column;
                     align-items: center;
@@ -450,6 +459,21 @@
                 }
                 .spotlight-photo img {
                     height: 260px !important;
+                }
+
+                /* REPARACIÓN DEL CENTRADO DE LOS CAJONES (GRID FIX) */
+                .box.alt .row {
+                    margin-left: 0 !important; /* Elimina el margen negativo de HTML5 UP */
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center !important; /* Fuerza el centrado absoluto */
+                    width: 100% !important;
+                }
+                .box.alt .row > * {
+                    padding-left: 0 !important; /* Elimina el padding que empujaba hacia la derecha */
+                    width: 100% !important;
+                    max-width: 400px !important; /* Mantiene la estética de "tarjeta" */
+                    margin-bottom: 2em !important;
                 }
             }
         </style>
@@ -476,7 +500,6 @@
                             <li><a href="#one">Ingeniería</a></li>
                             <li><a href="#two">Tecnología</a></li>
                             <li><a href="#four">Ventajas</a></li>
-                            <!-- Enlace WhatsApp "Quemado" para seguridad absoluta -->
                             <li><a href="https://wa.me/4915773122306?text=Hola%20Cacto%20Websites%2C%20quisiera%20cotizar%20el%20desarrollo%20de%20una%20p%C3%A1gina%20web%20para%20mi%20negocio%20en%20Santa%20Cruz.%20Mi%20nombre%20es%20%5BNombre%5D%20y%20mi%20rubro%20es%20%5BRubro%5D." class="button primary wa-link" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a></li>
                         </ul>
                     </nav>
