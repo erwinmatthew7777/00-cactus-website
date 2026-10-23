@@ -39,13 +39,12 @@
                 color: var(--c-text) !important;
             }
 
-            /* --- SOLUCIÓN AL NOMBRE DE EMPRESA INVISIBLE --- */
             strong, b {
                 color: var(--c-green-dark) !important;
                 font-weight: 800 !important;
             }
 
-            /* --- BARRAS DECORATIVAS ROJAS CAMBIADAS AL VERDE CORPORATIVO --- */
+            /* --- BARRAS DECORATIVAS AL VERDE CORPORATIVO --- */
             header.major:after,
             header.major::after,
             header.special:after,
@@ -60,6 +59,14 @@
                 border-bottom-color: var(--c-green) !important;
             }
 
+            /* --- FIX: CAMBIAR EL BOTÓN ROSA DEL MENÚ MÓVIL AL VERDE CORPORATIVO --- */
+            #titleBar .toggle {
+                background-color: var(--c-green) !important;
+            }
+            #titleBar .toggle:before {
+                color: #FFFFFF !important;
+            }
+
             /* ---------------- NAVBAR Y BARRA MÓVIL ---------------- */
             #header {
                 background: rgba(250, 248, 242, 0.96) !important;
@@ -68,7 +75,6 @@
                 border-bottom: 1px solid var(--c-border) !important;
                 box-shadow: 0 4px 20px rgba(4, 47, 22, 0.05) !important;
             }
-            /* Regla agrupada para alinear el logo tanto en PC (#header) como en celulares (#titleBar) */
             #header h1 a, #titleBar .title a {
                 color: var(--c-green) !important;
                 font-weight: 900 !important;
@@ -80,7 +86,6 @@
                 text-decoration: none !important;
                 border: none !important;
             }
-            /* Blindaje estricto de tamaño para el icono superior en todos los dispositivos */
             .nav-logo-icon {
                 width: 26px !important;
                 height: 26px !important;
@@ -183,7 +188,16 @@
                 filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.08));
             }
 
-            /* ---------------- SECCIONES CORPORATIVAS CON FOTOS DE FONDO ---------------- */
+            /* Grupo de botones del Hero */
+            .hero-buttons {
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-start;
+                margin-top: 2.2rem;
+                flex-wrap: wrap;
+            }
+
+            /* ---------------- SECCIONES CORPORATIVAS ---------------- */
             .spotlight {
                 position: relative !important;
                 border-bottom: 1px solid var(--c-border) !important;
@@ -333,6 +347,7 @@
                 color: var(--c-green) !important;
                 background: transparent !important;
                 transition: all 0.2s ease !important;
+                text-align: center !important;
             }
             .button:hover {
                 background: var(--c-green) !important;
@@ -391,24 +406,42 @@
                 font-size: 0.85em !important;
             }
 
-            /* --- MEDIA QUERIES PARA CELULARES --- */
+            /* --- FIX: RESPONSIVE / DISPOSITIVOS MÓVILES --- */
             @media screen and (max-width: 980px) {
+                #banner {
+                    /* Reducción drástica del espacio sobrante arriba y abajo */
+                    padding: 5.5em 1.5em 3.5em 1.5em !important;
+                }
                 #banner .content {
                     flex-direction: column-reverse !important;
-                    text-align: center !important;
                 }
                 #banner .content header {
-                    text-align: center !important;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center; /* Fuerza el centrado absoluto de todo el bloque */
                 }
-                #banner .content header h2 {
-                    font-size: 2.1em !important;
+                #banner .content header h2,
+                #banner .content header p,
+                .badge-tech {
+                    text-align: center !important; /* Fuerza el centrado de los textos */
                 }
                 #banner .content .hero-logo {
-                    margin: 0 auto 2.5em auto !important;
+                    margin: 0 auto 1.5em auto !important; /* Menos margen debajo del logo */
                     width: 100% !important;
                 }
                 #banner .content .hero-logo svg {
                     max-width: 160px !important;
+                }
+                /* Apila los botones de inicio perfectamente en el centro */
+                .hero-buttons {
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                }
+                .hero-buttons .button {
+                    width: 100% !important;
+                    max-width: 320px;
+                    margin: 0 0 1em 0 !important; 
                 }
 
                 .spotlight-inner {
@@ -424,7 +457,7 @@
     <body class="is-preload landing">
         <div id="page-wrapper">
 
-            <!-- Header con Logo en miniatura junto al nombre (Con tamaño estricto 26x26 para bloquear bugs móviles) -->
+            <!-- Header con Logo en miniatura junto al nombre -->
                 <header id="header">
                     <h1 id="logo">
                         <a href="index.html">
@@ -443,21 +476,23 @@
                             <li><a href="#one">Ingeniería</a></li>
                             <li><a href="#two">Tecnología</a></li>
                             <li><a href="#four">Ventajas</a></li>
-                            <li><a href="#" class="button primary wa-link" data-wa-msg="Hola Cacto Websites, quisiera cotizar el desarrollo de una página web para mi negocio en Santa Cruz. Mi nombre es [Nombre] y mi rubro es [Rubro].">Cotizar por WhatsApp</a></li>
+                            <!-- Enlace WhatsApp "Quemado" para seguridad absoluta -->
+                            <li><a href="https://wa.me/4915773122306?text=Hola%20Cacto%20Websites%2C%20quisiera%20cotizar%20el%20desarrollo%20de%20una%20p%C3%A1gina%20web%20para%20mi%20negocio%20en%20Santa%20Cruz.%20Mi%20nombre%20es%20%5BNombre%5D%20y%20mi%20rubro%20es%20%5BRubro%5D." class="button primary wa-link" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a></li>
                         </ul>
                     </nav>
                 </header>
 
-            <!-- Banner con fondo de catedral y logo principal con transparencia suave -->
+            <!-- Banner Principal -->
                 <section id="banner">
                     <div class="content">
                         <header>
                             <span class="badge-tech">Desarrollado desde Alemania, con corazón cruceño</span>
                             <h2>Precisión tecnológica alemana para impulsar las empresas de nuestra bella Santa Cruz</h2>
                             <p>Somos un equipo de ingenieros con formación en la TU Darmstadt, dedicados a modernizar el comercio cruceño con sistemas de alta precisión. Desarrollamos plataformas web corporativas que transforman visitas en clientes reales directo a tu WhatsApp.</p>
-                            <div style="margin-top: 2rem;">
-                                <a href="#" class="button primary wa-link" style="margin-right: 0.8rem;" data-wa-msg="Hola, me interesa solicitar el prototipo gratuito para evaluar una web corporativa antes de contratar. Mi nombre es [Nombre] de la empresa [Empresa].">Solicitar Prototipo Gratis</a>
-                                <a href="#one" class="button btn-hero-secondary">Nuestra Infraestructura</a>
+                            
+                            <div class="hero-buttons">
+                                <a href="https://wa.me/4915773122306?text=Hola%2C%20me%20interesa%20solicitar%20el%20prototipo%20gratuito%20para%20evaluar%20una%20web%20corporativa%20antes%20de%20contratar.%20Mi%20nombre%20es%20%5BNombre%5D%20de%20la%20empresa%20%5BEmpresa%5D." class="button primary wa-link" target="_blank" rel="noopener noreferrer">Solicitar Prototipo Gratis</a>
+                                <a href="#one" class="button btn-hero-secondary scrolly">Nuestra Infraestructura</a>
                             </div>
                         </header>
                         
@@ -504,7 +539,7 @@
                             </header>
                             <p>Así como en la investigación avanzada de bioprinting y desarrollo de sistemas mecatrónicos cada parámetro cuenta, en el entorno comercial cruceño la velocidad y la simplicidad son claves. Desarrollamos embudos limpios que conectan al instante a tus prospectos de Google con tu WhatsApp corporativo.</p>
                             <ul class="actions" style="margin-top: 1.5em;">
-                                <li><a href="#" class="button primary wa-link" data-wa-msg="Hola, vi la infraestructura tecnológica de Cacto Websites y me gustaría ver una demostración en vivo de cómo funciona el embudo hacia WhatsApp para mi sector.">Ver una Demostración</a></li>
+                                <li><a href="https://wa.me/4915773122306?text=Hola%2C%20vi%20la%20infraestructura%20tecnol%C3%B3gica%20de%20Cacto%20Websites%20y%20me%20gustar%C3%ADa%20ver%20una%20demostraci%C3%B3n%20en%20vivo%20de%20c%C3%B3mo%20funciona%20el%20embudo%20hacia%20WhatsApp%20para%20mi%20sector." class="button primary wa-link" target="_blank" rel="noopener noreferrer">Ver una Demostración</a></li>
                             </ul>
                         </div>
                         <div class="spotlight-photo">
@@ -526,7 +561,7 @@
                             </header>
                             <p>Desplegamos los sitios en redes globales de servidores optimizados con protección SSL avanzada. Si quieres agendar un cambio o update, como poner nuevas fotos o anunciar un evento, nosotros nos encargamos con un simple mensaje de WhatsApp. Lo mantenemos simple, para que ustedes no tengan que hacer nada.</p>
                             <ul class="actions" style="margin-top: 1.5em;">
-                                <li><a href="#" class="button wa-link" data-wa-msg="Hola, soy [Nombre] de la empresa [Empresa]. Quisiera agendar un diagnóstico porque tengo un problema / quiero actualizar mi sitio web existente. Lo que necesitamos resolver es: ">Agendar Diagnóstico</a></li>
+                                <li><a href="https://wa.me/4915773122306?text=Hola%2C%20soy%20%5BNombre%5D%20de%20la%20empresa%20%5BEmpresa%5D.%20Quisiera%20agendar%20un%20diagn%C3%B3stico%20porque%20tengo%20un%20problema%20%2F%20quiero%20actualizar%20mi%20sitio%20web%20existente.%20Lo%20que%20necesitamos%20resolver%20es%3A%20" class="button wa-link" target="_blank" rel="noopener noreferrer">Agendar Diagnóstico</a></li>
                             </ul>
                         </div>
                     </div>
@@ -575,7 +610,7 @@
                         </div>
                         <footer class="major">
                             <ul class="actions special">
-                                <li><a href="#" class="button primary wa-link" data-wa-msg="Hola, leí sobre sus estándares de ingeniería y me gustaría recibir una propuesta formal y costos para un proyecto web corporativo.">Solicitar Propuesta por WhatsApp</a></li>
+                                <li><a href="https://wa.me/4915773122306?text=Hola%2C%20le%C3%AD%20sobre%20sus%20est%C3%A1ndares%20de%20ingenier%C3%ADa%20y%20me%20gustar%C3%ADa%20recibir%20una%20propuesta%20formal%20y%20costos%20para%20un%20proyecto%20web%20corporativo." class="button primary wa-link" target="_blank" rel="noopener noreferrer">Solicitar Propuesta por WhatsApp</a></li>
                             </ul>
                         </footer>
                     </div>
@@ -590,7 +625,7 @@
                             <p style="font-size: 0.9em; opacity: 0.85;">Santa Cruz de la Sierra — Av. Rosita Pochi S/N, Av. Piraí entre 3er y 4to Anillo · Operaciones en Alemania y Bolivia</p>
                         </header>
                         <div style="text-align: center; margin-top: 2em;">
-                            <a href="#" class="button primary wa-link" style="background: #FFFFFF !important; color: #021D0D !important; font-size: 1.1em; padding: 0 2.5em; height: 3.4em; line-height: 3.4em;" data-wa-msg="Hola Cacto Websites, quiero hablar directamente con un ingeniero sobre el desarrollo del sitio web para mi empresa en Santa Cruz.">📲 Chatear por WhatsApp Ahora</a>
+                            <a href="https://wa.me/4915773122306?text=Hola%20Cacto%20Websites%2C%20quiero%20hablar%20directamente%20con%20un%20ingeniero%20sobre%20el%20desarrollo%20del%20sitio%20web%20para%20mi%20empresa%20en%20Santa%20Cruz." class="button primary wa-link" style="background: #FFFFFF !important; color: #021D0D !important; font-size: 1.1em; padding: 0 2.5em; height: 3.4em; line-height: 3.4em;" target="_blank" rel="noopener noreferrer">📲 Chatear por WhatsApp Ahora</a>
                         </div>
                     </div>
                 </section>
@@ -598,7 +633,7 @@
             <!-- Footer -->
                 <footer id="footer">
                     <ul class="icons">
-                        <li><a href="#" class="icon brands alt fa-whatsapp wa-link" data-wa-msg="Hola Cacto Websites, me comunico desde su sitio web. Deseo hacer una consulta general sobre sus servicios de ingeniería digital."><span class="label">WhatsApp</span></a></li>
+                        <li><a href="https://wa.me/4915773122306?text=Hola%20Cacto%20Websites%2C%20me%20comunico%20desde%20su%20sitio%20web.%20Deseo%20hacer%20una%20consulta%20general%20sobre%20sus%20servicios%20de%20ingenier%C3%ADa%20digital." class="icon brands alt fa-whatsapp wa-link" target="_blank" rel="noopener noreferrer"><span class="label">WhatsApp</span></a></li>
                         <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
                         <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
                         <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
@@ -620,19 +655,6 @@
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
-
-            <!-- CONFIGURACIÓN DE WHATSAPP DINÁMICA POR BOTÓN -->
-            <script>
-                const TELEFONO_WHATSAPP = "4915773122306"; 
-                const MENSAJE_DEFAULT = "Hola Cacto Websites, me comunico desde la web y deseo solicitar información.";
-
-                document.querySelectorAll('.wa-link').forEach(boton => {
-                    const mensaje = boton.getAttribute('data-wa-msg') || MENSAJE_DEFAULT;
-                    boton.href = `https://api.whatsapp.com/send?phone=${TELEFONO_WHATSAPP}&text=${encodeURIComponent(mensaje)}`;
-                    boton.target = "_blank";
-                    boton.rel = "noopener noreferrer";
-                });
-            </script>
 
     </body>
 </html>
