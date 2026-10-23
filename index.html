@@ -8,7 +8,7 @@
     <head>
         <title>Cacto Websites | Ingeniería Web Alemana para Empresas en Santa Cruz</title>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1.0" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         
@@ -18,9 +18,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
         <style>
-            /* --- ANIMACIONES NATIVAS PARA MÓVILES --- */
+            /* --- ANIMACIONES TÁCTILES Y DESLIZAMIENTO --- */
             html {
                 scroll-behavior: smooth !important;
+            }
+            * {
+                -webkit-tap-highlight-color: transparent !important; /* Elimina el cuadro azul en Android al tocar botones */
             }
 
             :root {
@@ -64,7 +67,7 @@
                 border-bottom-color: var(--c-green) !important;
             }
 
-            /* --- FIX: BARRA SUPERIOR EN MÓVILES (Fondo, Botón y Texto Blanco Centrado) --- */
+            /* --- BARRA SUPERIOR MÓVIL (VERDE OSCURO Y BLANCO) --- */
             #titleBar {
                 background: var(--c-green-dark) !important; 
             }
@@ -81,10 +84,10 @@
                 width: 100% !important;
                 position: absolute !important;
                 left: 0 !important;
-                pointer-events: none !important; /* Permite clickear el botón del menú aunque el título ocupe todo */
+                pointer-events: none !important;
             }
             #titleBar .title a {
-                color: #FFFFFF !important; /* TEXTO BLANCO EN MÓVILES */
+                color: #FFFFFF !important; 
                 display: flex !important;
                 align-items: center !important;
                 justify-content: center !important;
@@ -102,7 +105,7 @@
                 box-shadow: 0 4px 20px rgba(4, 47, 22, 0.05) !important;
             }
             #header h1 a {
-                color: var(--c-green) !important; /* TEXTO VERDE EN PC */
+                color: var(--c-green) !important;
                 font-weight: 900 !important;
                 font-size: 1.2em !important;
                 letter-spacing: 0.5px !important;
@@ -139,7 +142,7 @@
                 box-shadow: 0 4px 14px rgba(4, 47, 22, 0.28) !important;
             }
 
-            /* ---------------- HERO / BANNER CON CATEDRAL ---------------- */
+            /* ---------------- HERO / BANNER ---------------- */
             #banner {
                 position: relative !important;
                 background-image: linear-gradient(rgba(250, 248, 242, 0.80), rgba(250, 248, 242, 0.85)), url('catedral.jpg') !important;
@@ -177,7 +180,6 @@
                 border-radius: 50px;
                 margin-bottom: 1.2em;
                 border: 1px solid var(--c-green);
-                letter-spacing: 0.3px;
                 box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             }
             #banner .content header h2 {
@@ -281,7 +283,6 @@
                 padding: 3em !important;
                 width: 100% !important;
                 max-width: none !important;
-                transform: none !important;
             }
             .spotlight h2 {
                 color: var(--c-green-dark) !important;
@@ -335,6 +336,10 @@
                 transform: translateY(-5px) !important;
                 box-shadow: 0 16px 36px rgba(4, 47, 22, 0.14) !important;
             }
+            /* Animación táctil para el celular al presionar la tarjeta */
+            .box.alt section:active {
+                transform: scale(0.97) !important;
+            }
             .icon.alt.major {
                 background: var(--c-green) !important;
                 color: #FFFFFF !important;
@@ -370,7 +375,7 @@
                 border: 1.5px solid var(--c-green) !important;
                 color: var(--c-green) !important;
                 background: transparent !important;
-                transition: all 0.2s ease !important;
+                transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
                 text-align: center !important;
                 display: inline-block;
             }
@@ -379,8 +384,10 @@
                 color: #FFFFFF !important;
                 transform: translateY(-2px) !important;
             }
+            /* Botones interactivos al toque en celular */
             .button:active {
-                transform: scale(0.96) translateY(0) !important;
+                transform: scale(0.94) translateY(0) !important;
+                box-shadow: 0 4px 10px rgba(4, 47, 22, 0.2) !important;
             }
             
             .button.primary {
@@ -400,7 +407,6 @@
                 color: var(--c-green-dark) !important;
                 border: 1.5px solid var(--c-green) !important;
                 box-shadow: 0 8px 20px rgba(4, 47, 22, 0.12) !important;
-                transition: all 0.2s ease !important;
             }
             .button.btn-hero-secondary:hover {
                 background: #FFFFFF !important;
@@ -435,7 +441,7 @@
                 font-size: 0.85em !important;
             }
 
-            /* --- FIX: CAJONES Y RESPONSIVE PARA CELULARES --- */
+            /* --- FIX ABSOLUTO: CENTRADO Y ANIMACIONES EN CELULARES --- */
             @media screen and (max-width: 980px) {
                 #banner {
                     padding: 5.5em 1.5em 3.5em 1.5em !important;
@@ -480,38 +486,67 @@
                     height: 260px !important;
                 }
 
-                /* REPARACIÓN DEL CENTRADO DE LOS CAJONES (GRID FIX) */
+                /* 1. ELIMINAR LOS MÁRGENES NEGATIVOS Y FORZAR COLUMNA CENTRAL */
                 .box.alt .row {
-                    margin-left: 0 !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
                     display: flex !important;
                     flex-direction: column !important;
-                    align-items: center !important;
+                    align-items: center !important; /* Centra las cajas en la pantalla */
+                    justify-content: center !important;
                     width: 100% !important;
                 }
                 .box.alt .row > * {
-                    padding-left: 0 !important;
+                    padding: 0 !important; /* Quita el relleno fantasma izquierdo */
+                    margin: 0 0 2em 0 !important;
+                    float: none !important; /* Anula la cuadrícula antigua */
                     width: 100% !important;
-                    max-width: 400px !important;
-                    margin-bottom: 2em !important;
+                    max-width: 380px !important; /* Ancho elegante para la tarjeta */
                 }
 
-                /* --- SOLUCIÓN: CENTRADO PERFECTO DEL CONTENIDO DENTRO DE LOS CAJONES --- */
+                /* 2. CENTRAR EL TEXTO Y EL ICONO DENTRO DE LA CAJA */
                 .box.alt section {
                     display: flex !important;
                     flex-direction: column !important;
-                    align-items: center !important; /* Centra el ícono */
-                    text-align: center !important;  /* Centra el texto */
+                    align-items: center !important;
+                    justify-content: flex-start !important;
+                    text-align: center !important;
+                    padding: 2.5em 1.5em !important;
+                    box-sizing: border-box !important;
+                    /* ANIMACIÓN EN CASCADA (Sustituye el JS desactivado) */
+                    animation: slideUpFade 0.6s ease-out backwards;
                 }
-                .box.alt section .icon.alt.major {
-                    margin: 0 auto 1.2em auto !important; /* Asegura que el ícono no tenga márgenes descuadrados */
+                .box.alt section .icon {
+                    margin: 0 auto 1.2em auto !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
                 }
+                .box.alt section h3, .box.alt section p {
+                    text-align: center !important;
+                    width: 100% !important;
+                }
+
+                /* Retardos para que las cajas aparezcan una por una */
+                .box.alt section:nth-child(1) { animation-delay: 0.1s; }
+                .box.alt section:nth-child(2) { animation-delay: 0.25s; }
+                .box.alt section:nth-child(3) { animation-delay: 0.4s; }
+                .box.alt section:nth-child(4) { animation-delay: 0.55s; }
+                .box.alt section:nth-child(5) { animation-delay: 0.7s; }
+                .box.alt section:nth-child(6) { animation-delay: 0.85s; }
+            }
+
+            /* Keyframes de la animación de las tarjetas */
+            @keyframes slideUpFade {
+                from { opacity: 0; transform: translateY(40px); }
+                to { opacity: 1; transform: translateY(0); }
             }
         </style>
     </head>
     <body class="is-preload landing">
         <div id="page-wrapper">
 
-            <!-- Header con Logo SVG adaptable: Verde en Escritorio, Blanco en Celulares gracias a currentColor -->
+            <!-- Header con Logo SVG adaptable: Verde en PC, Blanco en Celulares (currentColor) -->
                 <header id="header">
                     <h1 id="logo">
                         <a href="index.html">
