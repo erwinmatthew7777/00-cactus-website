@@ -20,7 +20,7 @@
         <style>
             /* --- ANIMACIONES NATIVAS PARA MÓVILES --- */
             html {
-                scroll-behavior: smooth !important; /* Deslizamiento suave al presionar botones */
+                scroll-behavior: smooth !important;
             }
 
             :root {
@@ -64,17 +64,36 @@
                 border-bottom-color: var(--c-green) !important;
             }
 
-            /* --- FIX: BOTÓN DEL MENÚ MÓVIL AL VERDE OSCURO --- */
+            /* --- FIX: BARRA SUPERIOR EN MÓVILES (Fondo, Botón y Texto Blanco Centrado) --- */
             #titleBar {
-                background: var(--c-green-dark) !important; /* Fondo superior en móviles */
+                background: var(--c-green-dark) !important; 
             }
             #titleBar .toggle:before,
             #titleBar .toggle::before {
-                background-color: var(--c-green) !important; /* Quita el cuadro rosado */
+                background-color: var(--c-green) !important; 
                 background: var(--c-green) !important;
             }
+            #titleBar .title {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                height: 100% !important;
+                width: 100% !important;
+                position: absolute !important;
+                left: 0 !important;
+                pointer-events: none !important; /* Permite clickear el botón del menú aunque el título ocupe todo */
+            }
+            #titleBar .title a {
+                color: #FFFFFF !important; /* TEXTO BLANCO EN MÓVILES */
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                height: auto !important;
+                line-height: normal !important;
+                pointer-events: auto !important;
+            }
 
-            /* ---------------- NAVBAR ---------------- */
+            /* ---------------- NAVBAR DESKTOP ---------------- */
             #header {
                 background: rgba(250, 248, 242, 0.96) !important;
                 backdrop-filter: blur(12px) !important;
@@ -82,8 +101,8 @@
                 border-bottom: 1px solid var(--c-border) !important;
                 box-shadow: 0 4px 20px rgba(4, 47, 22, 0.05) !important;
             }
-            #header h1 a, #titleBar .title a {
-                color: var(--c-green) !important;
+            #header h1 a {
+                color: var(--c-green) !important; /* TEXTO VERDE EN PC */
                 font-weight: 900 !important;
                 font-size: 1.2em !important;
                 letter-spacing: 0.5px !important;
@@ -361,7 +380,7 @@
                 transform: translateY(-2px) !important;
             }
             .button:active {
-                transform: scale(0.96) translateY(0) !important; /* Efecto animado táctil en celulares */
+                transform: scale(0.96) translateY(0) !important;
             }
             
             .button.primary {
@@ -463,17 +482,28 @@
 
                 /* REPARACIÓN DEL CENTRADO DE LOS CAJONES (GRID FIX) */
                 .box.alt .row {
-                    margin-left: 0 !important; /* Elimina el margen negativo de HTML5 UP */
+                    margin-left: 0 !important;
                     display: flex !important;
                     flex-direction: column !important;
-                    align-items: center !important; /* Fuerza el centrado absoluto */
+                    align-items: center !important;
                     width: 100% !important;
                 }
                 .box.alt .row > * {
-                    padding-left: 0 !important; /* Elimina el padding que empujaba hacia la derecha */
+                    padding-left: 0 !important;
                     width: 100% !important;
-                    max-width: 400px !important; /* Mantiene la estética de "tarjeta" */
+                    max-width: 400px !important;
                     margin-bottom: 2em !important;
+                }
+
+                /* --- SOLUCIÓN: CENTRADO PERFECTO DEL CONTENIDO DENTRO DE LOS CAJONES --- */
+                .box.alt section {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center !important; /* Centra el ícono */
+                    text-align: center !important;  /* Centra el texto */
+                }
+                .box.alt section .icon.alt.major {
+                    margin: 0 auto 1.2em auto !important; /* Asegura que el ícono no tenga márgenes descuadrados */
                 }
             }
         </style>
@@ -481,15 +511,15 @@
     <body class="is-preload landing">
         <div id="page-wrapper">
 
-            <!-- Header con Logo en miniatura junto al nombre -->
+            <!-- Header con Logo SVG adaptable: Verde en Escritorio, Blanco en Celulares gracias a currentColor -->
                 <header id="header">
                     <h1 id="logo">
                         <a href="index.html">
                             <svg class="nav-logo-icon" width="26" height="26" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M20 200 L20 100 A90 90 0 0 1 200 100 L200 200 Z" stroke="#042F16" stroke-width="20" stroke-linejoin="round"/>
-                                <path d="M92 200 L92 70 A18 18 0 0 1 128 70 L128 200 Z" fill="#042F16"/>
-                                <path d="M92 145 H70 Q52 145 52 127 V95" stroke="#042F16" stroke-width="18" stroke-linecap="round"/>
-                                <path d="M128 145 H150 Q168 145 168 127 V105" stroke="#042F16" stroke-width="18" stroke-linecap="round"/>
+                                <path d="M20 200 L20 100 A90 90 0 0 1 200 100 L200 200 Z" stroke="currentColor" stroke-width="20" stroke-linejoin="round"/>
+                                <path d="M92 200 L92 70 A18 18 0 0 1 128 70 L128 200 Z" fill="currentColor"/>
+                                <path d="M92 145 H70 Q52 145 52 127 V95" stroke="currentColor" stroke-width="18" stroke-linecap="round"/>
+                                <path d="M128 145 H150 Q168 145 168 127 V105" stroke="currentColor" stroke-width="18" stroke-linecap="round"/>
                             </svg>
                             <span>CACTO WEBSITES</span>
                         </a>
